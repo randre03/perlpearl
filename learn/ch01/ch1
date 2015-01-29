@@ -1,0 +1,11 @@
+#!/usr/bin/perl
+print "Enter your first name: ";
+$name = <STDIN>;
+print "Enter a random number: ";
+chomp($repeat = <STDIN>);
+
+$n = 0;
+while($n < $repeat) {
+  print $name;
+  $n++
+}

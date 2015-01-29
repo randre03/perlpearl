@@ -1,0 +1,39 @@
+#!/usr/bin/perl
+use 5.014;
+use warnings;
+
+my $key = int(1 + rand 100);
+my $guess = 0;
+my $count = 0;
+my $range_min = 0;
+my $range_max = 100;
+
+say "Guess a # from 1-100, type \"quit\" to exit the game: ";
+while ("true") {
+    chomp($guess = <STDIN>);
+    $count++;
+    &comp($guess);
+}
+
+sub comp {
+    given( $guess ) {
+        when ($guess =~ "quit") {
+            say "The secret number was $key.";
+            die;
+        }
+        when ($guess < $key) {
+            $range_min = $guess if $guess > $range_min;
+            say "Too low";
+            say "Range is now $range_min to $range_max";
+        }
+        when ($guess > $key) {
+            $range_max = $guess if $guess < $range_max;
+            say "Too high";
+            say "Range is now $range_min to $range_max";
+        }
+        default {
+            say "You Win! It took $count guess(es).";
+            die;
+        }
+    }
+}

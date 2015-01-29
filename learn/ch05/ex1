@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+use 5.010;
+use warnings;
+
+$family_name{'fred'} = 'flintstone';
+$family_name{'barney'} = 'rubble';
+foreach my $ person (qw< barney fred >) {
+  print "I've heard of $ person $ family_name{ $ person}.\n";
+}

@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+@names =  qw( fred
+              betty
+              barney
+              dino
+              wilma
+              pebbles
+              bamm-bamm);
+
+print "Insert any number 1-7 (one # per line): ";
+chomp(@user_number = <STDIN>);
+
+foreach $number (@user_number) {
+  print "@names[$number - 1]\n";
+}

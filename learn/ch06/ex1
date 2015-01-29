@@ -1,0 +1,18 @@
+#!/usr/bin/perl
+use 5.010;
+use warnings;
+
+my %surname_hash = (
+  Roger     =>    'Randall',
+  Meghan    =>    'Randall',
+  Wynn      =>    'Randall',
+  Claire    =>    'Randall',
+  Fred      =>    'Flintstone',
+  Wilma     =>    'Flintstone',
+  Barney    =>    'Rubble',
+  Betty     =>    'Rubble',
+  );
+
+say "Please enter your first name and I shall guess your last: ";
+chomp($first_name = <STDIN>);
+say "Your surname is $surname_hash{$first_name}.";

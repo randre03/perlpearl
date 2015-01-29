@@ -1,0 +1,15 @@
+#!/usr/bin/perl
+use 5.010;
+
+sub total {
+  foreach (@_) {
+    $total += $_;
+  }
+  return $total;
+}
+
+$total = 0;
+my @fred = ( 1..1000 );
+&total(@fred);
+print "The total of numbers 1-1000 is $total.\n";
+

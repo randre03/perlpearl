@@ -1,0 +1,6 @@
+#!/usr/bin/perl
+print "Input some lines for reversing: ";
+@lines = <STDIN>;
+@lines = reverse(@lines);
+print "\n";
+print @lines;

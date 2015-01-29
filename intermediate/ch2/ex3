@@ -1,0 +1,17 @@
+#!/usr/bin/perl
+use 5.014;
+use warnings;
+use Business::ISBN;
+
+say "Please input your book's ISBN: ";
+chomp(my $input = <STDIN>);
+
+my $isbn13 = Business::ISBN->new($input);
+
+my $gc = $isbn13->group_code;
+my $pc = $isbn13->publisher_code;
+
+print "\nThe Group Code is: $gc.\n";
+say "The Publisher code is: $pc."
+
+__END__

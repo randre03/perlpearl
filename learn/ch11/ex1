@@ -1,0 +1,9 @@
+#!/usr/bin/perl
+use 5.010;
+use warnings;
+use Module::CoreList;
+
+my %modules = %{ $Module::CoreList::version{5.014} };
+
+#list all the keys of a hash
+print join "\n", keys %modules;
